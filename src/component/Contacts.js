@@ -18,27 +18,24 @@ class Contacts extends React.Component {
 
     return (
       <React.Fragment>
-   
-
-
-         <div className="detail-content" key={this.id}>
-            <h1 className="Title">Phone Book Manager</h1>
-             <ul className="list-group list-group-horizontal-sm" >
-                 <li className="list-width list-group-item">Name</li>
-                   <li className="list-width list-group-item">Phone Number</li>
-                   <li className="list-group-item">Edit</li>
-                   <li className="list-group-item">Delete</li>
-                    </ul>
-                    </div> 
+                 <div className="detail-content" key={this.id}>
+                    <h1 className="Title">Phone Book Manager</h1>
+                       <ul className="list-group list-group-horizontal-sm" >
+                          <li className="list-width list-group-item">Name</li>
+                          <li className="list-width list-group-item">Phone Number</li>
+                          <li className="list-group-item">Edit</li>
+                          <li className="list-group-item">Delete</li>
+                       </ul>
+                 </div> 
                     {/* &nbsp; &nbsp; &nbsp; */}
-        {contacts.map(contact => (
-          <Contact key={contact.id} contact={contact} />
-          ))}
+             {contacts.map(contact => (
+                 <Contact key={contact.id} contact={contact} />
+               ))}
         <Link to="/contact/add">
-        <button className="add-button" > + Add Contact</button>
+             <button className="add-button" > + Add Contact</button>
         </Link>
 
-      </React.Fragment>
+    </React.Fragment>
     );
   }
 }; 
