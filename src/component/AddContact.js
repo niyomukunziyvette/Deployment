@@ -42,54 +42,54 @@ class AddContact extends Component {
 
     return (
       <div className="card mb-3">
-        <div className="card-header">Add Contact</div>
-        <div className="card-body">
-    <form onSubmit={this.onSubmit}>
-          <div className="form-row names" >
-        <div className="form-name">
-          <label>Name</label>
-          <input className="form-control" 
-          type="tel" 
-          required placeholder="John" 
-          id="cardCVC" 
-          name="name"
-          value={name}
-          onChange={this.onChange}
-          />
-          </div>
-     </div>
-     <div className="form-row names">
-        <div className="sname form-name">
-            <label>Surname</label>
-            <input className="form-control" 
-                  type="tel" 
-                  required placeholder="Smith" 
-                  id="cardCVC"
-                  name="name" 
-                  value={name}
-                  onChange={this.onChange}
-                  />
-          </div>
-     </div>
-     <div className="form-row">
-        <div className="form-number">
-          <label>Mobile</label>
-          <input className="form-control" 
-          type="tel"
-           required placeholder="+111 1111 1111" 
-           id="cardCVC" 
-           name="phone_number"
-           value={phone_number}
-           onChange={this.onChange}
-           /></div>
-     </div>
-     <div>
-    <button className="add-number"> + Add Number</button>
-    </div>
-           
-    </form>
-        </div>
-      </div>
+          <div className="card-header">Add Contact</div>
+             <div className="card-body">
+                  <form onSubmit={this.onSubmit}>
+                     <div className="form-row names" >
+                        <div className="form-name">
+                           <label>Name</label>
+                               <input className="form-control" 
+                                     type="tel" 
+                                     required placeholder="John" 
+                                     id="cardCVC" 
+                                     name="name"
+                                     value={name}
+                                    onChange={this.onChange}
+                                 />
+                           </div>
+                       </div>
+                      <div className="form-row names">
+                         <div className="sname form-name">
+                             <label>Surname</label>
+                                   <input className="form-control" 
+                                          type="tel" 
+                                          required placeholder="Smith" 
+                                          id="cardCVC"
+                                          name="name" 
+                                          value={name}
+                                          onChange={this.onChange}
+                                        />
+                            </div>
+                       </div>
+                       <div className="form-row">
+                          <div className="form-number">
+                             <label>Mobile</label>
+                                  <input className="form-control" 
+                                         type="tel"
+                                         required placeholder="+111 1111 1111" 
+                                        id="cardCVC" 
+                                        name="phone_number"
+                                        value={phone_number}
+                                       onChange={this.onChange}
+                                    />
+                             </div>
+                         </div>
+                        <div>
+                           <button className="add-number"> + Add Number</button>
+                        </div>
+                 </form>
+            </div>
+         </div>
     );
   }
 }

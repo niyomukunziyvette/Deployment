@@ -7,24 +7,33 @@
 
 .list-group-horizontal-sm{
     margin-left:17%;
-    
 }
 
 .list-width{
     background-color:#80cbc4;
     border:none;
-    width:30%;
+    width:20%;
 }
 .list-widths{
     border: none;
+    width:20%;
 }
 #edit_button{
-  position: relative;
+    position: relative;
+    border:none;
+   margin-left:4%;
+  
+}
+#delete_button{
+  position: absolute;
     border:none;
     margin-left:40%;
 }
-#delete_button{
-  position: relative;
-    border:none;
-    margin-left:40%;
+.list-group{
+    width: 100%;
+}
+.add-button{
+    margin-top:10%;
+    margin-left:17%;
+    background-color:#66bb6a;
 }
