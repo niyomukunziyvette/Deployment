@@ -18,16 +18,16 @@ class Contacts extends React.Component {
       <React.Fragment>
                  <div className="detail-content" key={this.id}>
                      <div className="container-fluid">
-                        <h1 className="title">PHONE BOOK MANAGER</h1>
+                        <h1 className="title">Phone Book Manager</h1>
                     </div>
                        <ul className="list-group list-group-horizontal-sm" >
                           <li className="list-width list-group-item">Name</li>
                           <li className="list-width list-group-item">Phone Number</li>
-                          <li className="list-group-item">Edit</li>
-                          <li className="list-group-item">Delete</li>
+                          <li className=" list-width list-group-item">Edit</li>
+                          <li className="list-width list-group-item">Delete</li>
                        </ul>
                  </div> 
-                    {/* &nbsp; &nbsp; &nbsp; */}
+                   
              {contacts.map(contact => (
                  <Contact key={contact.id} contact={contact} />
                ))}

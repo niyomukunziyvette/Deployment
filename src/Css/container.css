@@ -3,5 +3,28 @@
     font-size:60px;
     color: black;
     margin-left:17%;
+}
+
+.list-group-horizontal-sm{
+    margin-left:17%;
     
+}
+
+.list-width{
+    background-color:#80cbc4;
+    border:none;
+    width:30%;
+}
+.list-widths{
+    border: none;
+}
+#edit_button{
+  position: relative;
+    border:none;
+    margin-left:40%;
+}
+#delete_button{
+  position: relative;
+    border:none;
+    margin-left:40%;
 }

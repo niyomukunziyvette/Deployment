@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import '../component/Contacts';
 import {DeleteContact} from '../action/ContactTask';
-
+import '../Css/container.css';
 
 class Contact extends Component {
  
@@ -20,21 +20,16 @@ this.props.DeleteContact(id);
     return (
       <div className="detail-content" key={this.id} >
            <ul className="list-group list-group-horizontal-sm" >
-                 <li className="list-width list-group-item">{name}</li>
-                 <li className="list-width list-group-item">{phone_number}</li>
+                 <li className="list-widths list-group-item">{name}</li> 
+                 <li className="list-widths list-group-item">{phone_number}</li> 
                  <Link to={`/contact/edit/${id}`}>
-                <li > 
+                 
                         <i className=" list-group-item fas fa-edit" id="edit_button" ></i>
-                  </li>
-              
-               </Link>
-               <li>
-              <i className="  list-group-item fas fa-trash delete" onClick={this.onDeleteClick.bind(this, id)}></i>
-              </li>
-               </ul> 
-             
-   </div> 
-     
+                   </Link>
+                       <i className="  list-group-item fas fa-trash delete" id="delete_button"onClick={this.onDeleteClick.bind(this, id)}></i> 
+            </ul> 
+      </div> 
+      
     );
   }
 }
