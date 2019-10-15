@@ -1,6 +1,7 @@
 import {GET_CONTACTS,DELETE_CONTACT, ADD_CONTACT, GET_CONTACT,UPDATE_CONTACT} from './types';
 import Axios from 'axios';
 
+
 //Fetch contacts
 export const getContacts=()=> async dispatch=>{
     const res= await Axios.get('https://code-catalist-phone-book-rails.herokuapp.com/contacts')

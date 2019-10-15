@@ -5,7 +5,6 @@ import {connect} from 'react-redux';
 import '../component/Contacts';
 import {addContact} from '../action/ContactTask';
 
-
 class AddContact extends Component {
   state = {
     name: '',
@@ -22,6 +21,7 @@ class AddContact extends Component {
       phone_number,
      
      };
+  
 
     // Submit Contact 
        this.props.addContact(newContact)
@@ -29,13 +29,14 @@ class AddContact extends Component {
     this.setState({
       name: '',
       phone_number: ''
+      
     
     });
 
     this.props.history.push('/');
   };
 
-  onChange = e => this.setState({ [e.target.name]: e.target.value });
+onChange = e => this.setState({ [e.target.name]: e.target.value,[e.target.lname]:e.target.value });
 
   render() {
     const { name,phone_number} = this.state;

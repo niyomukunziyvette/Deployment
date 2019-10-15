@@ -3,12 +3,11 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import {getContact ,updateContact} from '../action/ContactTask';
 import Contact from './Contact';
-
+import'../Css/container.css'; 
 class EditContact extends Component {
   state = {
     name: '',
-    phone_number: '',
-    errors: {}
+    phone_number: ''
   };
 componentWillReceiveProps(nextProps,nextState){
   const {name,phone_number}= nextProps.contact;
@@ -22,19 +21,6 @@ componentDidMount(){
     e.preventDefault();
 
     const { name, phone_number } = this.state;
-
-    // Check For Errors
-    if (name === '') {
-      this.setState({ errors: { name: 'Name is required' } });
-      return;
-    }
-
-    if (phone_number === '') {
-      this.setState({ errors: { phone: 'Phone is required' } });
-      return;
-    }
-
-    
     const { id } = this.props.match.params;
     const updContact = {
       id,
@@ -48,7 +34,6 @@ this.props.updateContact(updContact);
     this.setState({
       name: '',
       phone_number: '',
-     // errors: {}
     });
 
     this.props.history.push('/');
@@ -61,46 +46,41 @@ this.props.updateContact(updContact);
 
     return (
       <div className="card mb-3">
-        <div className="card-header">Edit Contact</div>
-        <div className="card-body">
-        <form onSubmit={this.onSubmit}>      
-      <div className="form-row names" >
-        <div className="form-name">
-          <label>Name</label>
-          <input className="form-control" 
-          type="tel" 
-          required placeholder="John" 
-          id="cardCVC" 
-          name="name"
-          value={name}
-          onChange={this.onChange}
-          />
-          </div>
-     </div>
+          <div className="card-body">
+                <form onSubmit={this.onSubmit}>      
+                     <div className="form-row names" >
+                         <div className="form-name">
+                            <label>Name</label>
+                                 <input className="form-control" 
+                                       type="tel" 
+                                       required placeholder="John" 
+                                       id="cardCVC" 
+                                       name="name"
+                                       value={name}
+                                       onChange={this.onChange}
+                                   />
+                           </div>
+                        </div>
 
-     <div className="form-row">
-        <div className="form-number">
-          <label>Mobile</label>
-          <input className="form-control" 
-          type="tel"
-           required placeholder="+111 1111 1111" 
-           id="cardCVC" 
-           name="phone_number"
-           value={phone_number}
-           onChange={this.onChange}
-           /></div>
-     </div>
-     <div>
-       
-         <button className="add-number"> + Add Number</button>
-        
-    </div>
-            
-       
-       </form>
-      
+                       <div className="form-row">
+                          <div className="form-number">
+                             <label>Mobile</label>
+                                  <input className="form-control" 
+                                        type="tel"
+                                        required placeholder="+111 1111 1111" 
+                                        id="cardCVC" 
+                                        name="phone_number"
+                                        value={phone_number}
+                                        onChange={this.onChange}
+                                   />
+                            </div>
+                         </div>
+                         <div>
+                            <button className="add-number"> + Add Number</button>
+                           </div>
+                   </form>
+            </div>
         </div>
-      </div>
     );
   }
 }
