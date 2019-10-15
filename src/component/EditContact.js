@@ -95,9 +95,7 @@ this.props.updateContact(updContact);
          <button className="add-number"> + Add Number</button>
         
     </div>
-            <div className="footer">
-             <p className="Copyright">&copy; all rights are reserved.</p>
-            </div>
+            
        
        </form>
       

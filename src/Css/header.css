@@ -1,0 +1,35 @@
+.header{
+    background-color:#eceff1;
+    height:80px;
+}
+.yellow{
+    position: relative;
+    color:gold;
+    
+}
+.phone{
+    position: relative;
+    background-color:black;
+    color: white;
+    border-radius:48%;
+    transform: rotate(100deg);
+    font-size: 300%;
+}
+.dot-yellow {
+    position: relative;
+    color:gold;
+    font-size:300%;
+    margin-top:-6%;
+    margin-left:-4%;
+}
+.logo{
+    position: relative;
+    margin-top:-9%;
+    margin-left:9%;
+}
+.left{
+    position:fixed;
+    margin-left: 58%;
+    margin-top:2%;
+   
+}

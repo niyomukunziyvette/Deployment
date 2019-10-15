@@ -4,10 +4,8 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import '../component/Contacts';
 import {Link} from 'react-router-dom';
-//import AddContact from './ AddContact';
 import {getContacts} from '../action/ContactTask';
-//import Contact from '../component/Contact'
-
+import '../Css/container.css';
 class Contacts extends React.Component {
   componentDidMount(){
     this.props.getContacts();
@@ -19,7 +17,9 @@ class Contacts extends React.Component {
     return (
       <React.Fragment>
                  <div className="detail-content" key={this.id}>
-                    <h1 className="Title">Phone Book Manager</h1>
+                     <div className="container-fluid">
+                        <h1 className="title">PHONE BOOK MANAGER</h1>
+                    </div>
                        <ul className="list-group list-group-horizontal-sm" >
                           <li className="list-width list-group-item">Name</li>
                           <li className="list-width list-group-item">Phone Number</li>
