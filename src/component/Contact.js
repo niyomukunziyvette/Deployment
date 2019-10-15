@@ -19,21 +19,22 @@ this.props.DeleteContact(id);
 
     return (
       <div className="detail-content" key={this.id} >
-        
-
-             <ul className="list-group list-group-horizontal-sm" >
-                <li className="list-width list-group-item">{name}</li>
-                <li className="list-width list-group-item">{phone_number}</li>
-               
-                  <Link to={`/contact/edit/${id}`}>
+           <ul className="list-group list-group-horizontal-sm" >
+                 <li className="list-width list-group-item">{name}</li>
+                 <li className="list-width list-group-item">{phone_number}</li>
+                 <Link to={`/contact/edit/${id}`}>
+                <li > 
                         <i className=" list-group-item fas fa-edit" id="edit_button" ></i>
-                  </Link>
-                
-               <i className="  list-group-item fas fa-trash delete" onClick={this.onDeleteClick.bind(this, id)}></i>
-               </ul>
+                  </li>
+              
+               </Link>
+               <li>
+              <i className="  list-group-item fas fa-trash delete" onClick={this.onDeleteClick.bind(this, id)}></i>
+              </li>
+               </ul> 
              
-      </div>
-      
+   </div> 
+     
     );
   }
 }

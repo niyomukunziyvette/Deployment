@@ -6,6 +6,7 @@ import '../component/Contacts';
 import {Link} from 'react-router-dom';
 //import AddContact from './ AddContact';
 import {getContacts} from '../action/ContactTask';
+//import Contact from '../component/Contact'
 
 class Contacts extends React.Component {
   componentDidMount(){
@@ -13,10 +14,14 @@ class Contacts extends React.Component {
   }
   render() {
     const { contacts } = this.props;
+   
+
     return (
       <React.Fragment>
+   
 
-        <div className="detail-content" key={this.id}>
+
+         <div className="detail-content" key={this.id}>
             <h1 className="Title">Phone Book Manager</h1>
              <ul className="list-group list-group-horizontal-sm" >
                  <li className="list-width list-group-item">Name</li>
@@ -24,8 +29,8 @@ class Contacts extends React.Component {
                    <li className="list-group-item">Edit</li>
                    <li className="list-group-item">Delete</li>
                     </ul>
-                    </div>
-                     
+                    </div> 
+                    {/* &nbsp; &nbsp; &nbsp; */}
         {contacts.map(contact => (
           <Contact key={contact.id} contact={contact} />
           ))}
