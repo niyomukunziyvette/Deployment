@@ -7,18 +7,20 @@ import {addContact} from '../action/ContactTask';
 
 class AddContact extends Component {
   state = {
-    name: '',
+   
     phone_number: '',
+    fname:'',
+    lname:''
   
   };
 
   onSubmit = (e) => {
     e.preventDefault();
 
-    const { name, phone_number } = this.state;
+    const { phone_number,fname,lname } = this.state;
   const newContact = {
-      name,
-      phone_number,
+      name:fname+' '+lname,
+      phone_number:phone_number
      
      };
   
@@ -27,19 +29,19 @@ class AddContact extends Component {
        this.props.addContact(newContact)
    
     this.setState({
-      name: '',
-      phone_number: ''
-      
+      phone_number: '',
+      fname:'',
+      lname:''
     
     });
 
     this.props.history.push('/');
   };
 
-onChange = e => this.setState({ [e.target.name]: e.target.value,[e.target.lname]:e.target.value });
+onChange = e => this.setState({ [e.target.name]: e.target.value });
 
   render() {
-    const { name,phone_number} = this.state;
+    const { fname,lname,phone_number} = this.state;
 
     return (
       <div className="card mb-3">
@@ -53,8 +55,8 @@ onChange = e => this.setState({ [e.target.name]: e.target.value,[e.target.lname]
                                      type="tel" 
                                      required placeholder="John" 
                                      id="cardCVC" 
-                                     name="name"
-                                     value={name}
+                                     name="fname"
+                                     value={fname}
                                     onChange={this.onChange}
                                  />
                            </div>
@@ -66,8 +68,8 @@ onChange = e => this.setState({ [e.target.name]: e.target.value,[e.target.lname]
                                           type="tel" 
                                           required placeholder="Smith" 
                                           id="cardCVC"
-                                          name="name" 
-                                          value={name}
+                                          name="lname" 
+                                          value={lname}
                                           onChange={this.onChange}
                                         />
                             </div>
