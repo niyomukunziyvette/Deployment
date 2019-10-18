@@ -34,9 +34,11 @@ export default (state=initialState,action) =>{
          return{
              ...state,
              contacts: state.contacts.map(
-                 contact=>contact.id === action.id ? 
-                 (contact = action.payload): contact
+                 contact=>contact.id === action.id ?
+                 (contact = action.payload): contact 
                  )
+                  
+               
          } ;     
         default:
             return state
