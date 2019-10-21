@@ -9,27 +9,29 @@ class EditContact extends Component {
     name: '',
     phone_number: ''
   };
-componentWillReceiveProps(nextProps,nextState){
-  const {name,phone_number}= nextProps.contact;
-  this.setState({name,phone_number})
-}
-componentDidMount(){
+componentWillReceiveProps(nextProps){
+  
+const {name,phone_number}= nextProps.contact;   
+   this.setState({name,phone_number})
+ }
+ componentDidMount(){
   const {id}= this.props.match.params;
-  this.props.getContact(id)
-}
+   this.props.getContact(id)
+ }
   onSubmit = (e) => {
     e.preventDefault();
-
+      
     const { name, phone_number } = this.state;
     const { id } = this.props.match.params;
-    const updContact = {
+    const upudatedContact = {
       id,
       name,
       phone_number
+      
     };
 
     // Update contact
-this.props.updateContact(updContact);
+this.props.updateContact(upudatedContact);
     // Clear State
     this.setState({
       name: '',
@@ -43,9 +45,9 @@ this.props.updateContact(updContact);
 
   render() {
     const { name,phone_number } = this.state;
-
+    
     return (
-      <div className="card mb-3">
+      <div className="card mb-3 id=body">
           <div className="card-body">
                 <form onSubmit={this.onSubmit}>      
                      <div className="form-row names" >
@@ -84,12 +86,13 @@ this.props.updateContact(updContact);
     );
   }
 }
-  Contact.PropTypes = {
+  Contact.propTypes = {
   contact:PropTypes.object.isRequired,
   getContact:PropTypes.func.isRequired
 }
 const mapStateToProps= (state)=>({
  contact:state.contact.contact
+
 })
 export default connect(mapStateToProps, {getContact,updateContact}) (EditContact);
 
